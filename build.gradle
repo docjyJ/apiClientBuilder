@@ -25,7 +25,7 @@ dependencies {
 // TASK DEF
 task docPublish {
     dependsOn 'clean'
-    dependsOn 'publish'
+    dependsOn 'bintrayUpload'
 }
 
 task docDocka {
