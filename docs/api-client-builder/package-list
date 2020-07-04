@@ -1,0 +1,5 @@
+$dokka.format:gfm
+$dokka.linkExtension:md
+
+fr.docjyJ.apiClientBuilder.connection
+fr.docjyJ.apiClientBuilder.exception

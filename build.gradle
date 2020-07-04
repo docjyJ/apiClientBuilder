@@ -1,0 +1,135 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.72'
+    id 'org.jetbrains.dokka' version '0.10.1'
+    id 'com.jfrog.bintray' version '1.8.5'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url  'https://dl.bintray.com/docjyj/docjyjMaven'
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+}
+
+// TASK DEF
+task docPublish {
+    dependsOn 'clean'
+    dependsOn 'publish'
+}
+
+task docDocka {
+    dependsOn 'dokka'
+}
+
+def GROUP_ID= 'fr.docjyJ.apiClientBuilder'
+def ARTIFACT_ID= 'apiClientBuilder'
+
+def MAVEN_REPOSITORY= 'maven'
+def USER= 'docjyj'
+
+def VERSION_NAME='1.0'
+
+def VERSION_DESC = 'Update of library '+ARTIFACT_ID+' at the vertion '+VERSION_NAME
+def DESC = 'packages.md'
+
+// KOTLIN COMPILE
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+
+// PROJECT INFO
+group GROUP_ID
+version VERSION_NAME
+sourceCompatibility = 1.8
+
+// PUBLISHING
+task sourcesJar(type: Jar, dependsOn: project.classes) {
+    from sourceSets.main.allSource
+}
+
+task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = 'javadoc'
+    outputDirectory = "$buildDir/javadoc"
+}
+
+task javadocJar(type: Jar, dependsOn: dokkaJavadoc) {
+    from "$buildDir/javadoc"
+}
+
+bintray {
+    user = project.property('bintrayUser')
+    key = project.property('bintrayApiKey')
+    publications = ['mavenJava']
+    publish = true
+    pkg {
+        repo = MAVEN_REPOSITORY
+        name = ARTIFACT_ID
+        userOrg = USER
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/'+USER+'/'+ARTIFACT_ID+'.git'
+        desc = DESC
+        websiteUrl = 'https://github.com/'+USER+'/'+ARTIFACT_ID
+        issueTrackerUrl = 'https://github.com/'+USER+'/'+ARTIFACT_ID+'/issues'
+        githubRepo = USER+'/'+ARTIFACT_ID
+
+        version {
+            name = VERSION_NAME
+            vcsTag = 'v'+VERSION_NAME
+            released = new Date()
+            desc = VERSION_DESC
+            gpg {
+                sign = true
+            }
+        }
+    }
+}
+
+artifacts {
+    archives sourcesJar, javadocJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId project.bintray.pkg.name
+            from components.java
+
+            artifact sourcesJar {
+                classifier = 'sources'
+            }
+            artifact javadocJar {
+                classifier = 'javadoc'
+            }
+        }
+    }
+}
+
+// GIT HUB LIB
+dokka {
+    outputFormat = 'gfm'
+    outputDirectory = './docs/'
+    configuration {
+        includes = ['./docs/packages.md']
+        sourceLink {
+            path = 'src/main/kotlin'
+            url = 'https://github.com/'+USER+'/'+ARTIFACT_ID+'/tree/master/src/main/kotlin'
+            lineSuffix = "#L"
+        }
+    }
+}
+
