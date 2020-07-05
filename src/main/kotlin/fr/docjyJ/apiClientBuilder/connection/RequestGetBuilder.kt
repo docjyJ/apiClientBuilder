@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets
 /**
  * Signals that an error was reached during the request to the server.
  */
-abstract class RequestGetBuilder<T:ResponseTemplate>(private val responseClass: Class<T>)  {
+abstract class RequestGetBuilder(private val responseClass: Class<ResponseTemplate>)  {
 
 
     private fun runUrl(): String {
@@ -33,7 +33,7 @@ abstract class RequestGetBuilder<T:ResponseTemplate>(private val responseClass: 
                         val value = field.get(obj) ?: null
                         val key = it.name
                         if(value != null) {
-                            try { parameters.append("${if(parameters.toString()=="")"?" else "&"}$key=${URLEncoder.encode(value.toString(), StandardCharsets.UTF_8.toString())}") }
+                            try { parameters.append("${if(parameters.toString()=="")"?" else "&"}$key=${URLEncoder.encode(value.parameterToString(), StandardCharsets.UTF_8.toString())}") }
                             catch (e: UnsupportedEncodingException) { throw Exception(ClientException.ENCODE_PARAMETER, e) }
                         }
                     }
@@ -106,7 +106,7 @@ abstract class RequestGetBuilder<T:ResponseTemplate>(private val responseClass: 
     }
 
     @Throws(ServerException::class, ClientException::class)
-    private fun run():T {
+    private fun run():ResponseTemplate {
         //Get the response
         val  obj = runAsString()
 
