@@ -5,5 +5,5 @@ import java.lang.reflect.Type
 
 class JsonDeserializeRegisterTypeAdapter(
         val type: Type,
-        val jsonDeserializer: JsonDeserializer<Any>
+        val jsonDeserializer: JsonDeserializer<*>
 )

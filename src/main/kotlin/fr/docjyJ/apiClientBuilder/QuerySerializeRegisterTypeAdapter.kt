@@ -4,5 +4,5 @@ import java.lang.reflect.Type
 
 class QuerySerializeRegisterTypeAdapter(
         val type: Type,
-        val querySerializer: QuerySerializer<Any>
+        val querySerializer: QuerySerializer<*>
 )

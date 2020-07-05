@@ -34,7 +34,7 @@ abstract class RequestGetBuilder<T: ResponseTemplate>(
                     var stringValue = value.toString()
                     queryTypeAdapter?.forEach {
                         if(it.type == type){
-                            stringValue = it.querySerializer.serialize(value,it.type)
+                            stringValue = (it.querySerializer as QuerySerializer<Any>).serialize(value,it.type)
                         }
                     }
                     parameters.append(
