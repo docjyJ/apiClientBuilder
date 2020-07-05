@@ -8,5 +8,5 @@ Contains class to creat request/response.
 
 | Name | Summary |
 |---|---|
-| [RequestGetBuilder](-request-get-builder/index.md) | Signals that an error was reached during the request to the server.`abstract class RequestGetBuilder<T : `[`ResponseTemplate`](-response-template.md)`>` |
+| [RequestGetBuilder](-request-get-builder/index.md) | Signals that an error was reached during the request to the server.`abstract class RequestGetBuilder` |
 | [ResponseTemplate](-response-template.md) | The response class of a request.`interface ResponseTemplate` |

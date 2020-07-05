@@ -2,7 +2,7 @@
 
 # execute
 
-`fun execute(): T` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/connection/RequestGetBuilder.kt#L135)
+`fun execute(): `[`ResponseTemplate`](../-response-template.md) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/connection/RequestGetBuilder.kt#L135)
 
 Execute the request.
 
