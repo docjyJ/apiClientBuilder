@@ -1,4 +1,4 @@
-package fr.docjyJ.apiClientBuilder.connection
+package fr.docjyJ.apiClientBuilder
 
 /**
  * The response class of a request.

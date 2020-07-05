@@ -6,4 +6,4 @@
 
 | Name | Summary |
 |---|---|
-| [QueryParameter](-query-parameter/index.md) | `annotation class QueryParameter` |
+| [QueryName](-query-name/index.md) | `annotation class QueryName` |

@@ -1,11 +1,12 @@
-package fr.docjyJ.apiClientBuilder.connection
+package fr.docjyJ.apiClientBuilder
 
 import com.google.gson.GsonBuilder
-import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
+import fr.docjyJ.apiClientBuilder.anotation.QueryName
 import fr.docjyJ.apiClientBuilder.exception.ApiClientException
 import fr.docjyJ.apiClientBuilder.exception.ApiServerException
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.lang.reflect.Type
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
@@ -14,7 +15,7 @@ import java.nio.charset.StandardCharsets
 /**
  * Signals that an error was reached during the request to the server.
  */
-abstract class RequestGetBuilder<T:ResponseTemplate>(
+abstract class RequestGetBuilder<T: ResponseTemplate>(
         private val endPointUrl: String,
         private val responseClass: Class<T>
 ) {
@@ -25,21 +26,23 @@ abstract class RequestGetBuilder<T:ResponseTemplate>(
         obj.javaClass.declaredFields.forEach { field ->
             try {
                 field.isAccessible = true
-                val content = field.get(obj)?:null
-                var key = field.name
-                field.annotations.forEach { if(it is QueryParameter) key = it.name }
                 val value = field.get(obj) ?: null
+                var key = field.name
+                field.annotations.forEach { if(it is QueryName) key = it.name }
                 if(value != null) {
+                    val type: Type = field.type
+                    var stringValue = value.toString()
+                    queryTypeAdapter?.forEach {
+                        if(it.type == type){
+                            stringValue = it.querySerializer.serialize(value,it.type)
+                        }
+                    }
                     parameters.append(
-                            if(parameters.toString()=="")
-                                "?"
-                            else
-                                "&" +
-                            key +
-                            "=" +
+                            (if(parameters.toString()=="") "?" else "&") +
+                            "$key=" +
                             URLEncoder.encode(
-                                    value.parameterToString(),
-                                    StandardCharsets.UTF_8.toString()))
+                                value.parameterToString(),
+                                StandardCharsets.UTF_8.toString()))
                 }
             }
             catch (e: Throwable) {
@@ -97,7 +100,11 @@ abstract class RequestGetBuilder<T:ResponseTemplate>(
         //Transforme
         return try {
             GsonBuilder()
-                    .customGson()
+                    .apply {
+                        gsonTypeAdapter?.forEach {
+                            registerTypeAdapter(it.type, it.jsonDeserializer)
+                        }
+                    }
                     .create()
                     .fromJson(obj, responseClass)
         }
@@ -113,13 +120,10 @@ abstract class RequestGetBuilder<T:ResponseTemplate>(
     /**
      * Edit the HttpURLConnection object.
      */
-    abstract fun HttpURLConnection.connectionApply():HttpURLConnection
+    open fun HttpURLConnection.connectionApply() = this
 
-    /**
-     * Edit the Gson object.
-     */
-    abstract fun GsonBuilder.customGson(): GsonBuilder
-
+    var gsonTypeAdapter: List<JsonDeserializeRegisterTypeAdapter>? = null
+    var queryTypeAdapter: List<QuerySerializeRegisterTypeAdapter>? = null
     /**
      * Build parametres with no String class.
      */
@@ -132,7 +136,7 @@ abstract class RequestGetBuilder<T:ResponseTemplate>(
      * @throws ApiClientException When the library makes a mistake.
      */
     @Throws(ApiServerException::class, ApiClientException::class)
-    fun execute() = run()
+    open fun execute() = run()
 
     /**
      * Execute the request.
@@ -141,7 +145,7 @@ abstract class RequestGetBuilder<T:ResponseTemplate>(
      * @throws ApiClientException When the library makes a mistake.
      */
     @Throws(ApiServerException::class, ApiClientException::class)
-    fun executeAsString() = runAsString()
+    open fun executeAsString() = runAsString()
 
     /**
      * Show the URL.
@@ -149,5 +153,6 @@ abstract class RequestGetBuilder<T:ResponseTemplate>(
      * @throws ApiClientException When the library makes a mistake.
      */
     @Throws(ApiClientException::class)
-    fun getUrl() = runUrl()
+    open fun getUrl() = runUrl()
 }
+

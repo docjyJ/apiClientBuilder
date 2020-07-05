@@ -22,19 +22,34 @@ Signals that an error was reached during the request to the server.
 
 |
 
-##### [fr.docjyJ.apiClientBuilder.anotation.QueryParameter](../fr.docjy-j.api-client-builder.anotation/-query-parameter/index.md)
+##### [fr.docjyJ.apiClientBuilder.JsonDeserializeRegisterTypeAdapter](../fr.docjy-j.api-client-builder/-json-deserialize-register-type-adapter/index.md)
 
 
 |
 
-##### [fr.docjyJ.apiClientBuilder.connection.RequestGetBuilder](../fr.docjy-j.api-client-builder.connection/-request-get-builder/index.md)
+##### [fr.docjyJ.apiClientBuilder.anotation.QueryName](../fr.docjy-j.api-client-builder.anotation/-query-name/index.md)
+
+
+|
+
+##### [fr.docjyJ.apiClientBuilder.QuerySerializer](../fr.docjy-j.api-client-builder/-query-serializer/index.md)
+
+
+|
+
+##### [fr.docjyJ.apiClientBuilder.QuerySerializeRegisterTypeAdapter](../fr.docjy-j.api-client-builder/-query-serialize-register-type-adapter/index.md)
+
+
+|
+
+##### [fr.docjyJ.apiClientBuilder.RequestGetBuilder](../fr.docjy-j.api-client-builder/-request-get-builder/index.md)
 
 Signals that an error was reached during the request to the server.
 
 
 |
 
-##### [fr.docjyJ.apiClientBuilder.connection.ResponseTemplate](../fr.docjy-j.api-client-builder.connection/-response-template.md)
+##### [fr.docjyJ.apiClientBuilder.ResponseTemplate](../fr.docjy-j.api-client-builder/-response-template.md)
 
 The response class of a request.
 
