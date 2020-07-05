@@ -2,7 +2,14 @@
 
 # getUrl
 
-`abstract fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr.docjyJ.apiClientBuilder/connection/RequestGetBuilder.kt#L27)
+`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/connection/RequestGetBuilder.kt#L152)
 
-Set the URL.
+Show the URL.
+
+### Exceptions
+
+`ClientException` - When the library makes a mistake.
+
+**Return**
+The URL of request in String object.
 

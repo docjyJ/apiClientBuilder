@@ -2,7 +2,7 @@
 
 # responseCode
 
-`val responseCode: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr.docjyJ.apiClientBuilder/exception/ServerException.kt#L23)
+`val responseCode: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/exception/ServerException.kt#L23)
 
 code of the request.
 

@@ -15,16 +15,19 @@ Indicates that an error was reached during a library action.
 
 |
 
-##### [fr.docjyJ.apiClientBuilder.connection.RequestGetBuilder](../fr.docjy-j.api-client-builder.connection/-request-get-builder/index.md)
-
-Signals that an error was reached during the request to the server.
+##### [fr.docjyJ.apiClientBuilder.anotation.EndpointURL](../fr.docjy-j.api-client-builder.anotation/-endpoint-u-r-l/index.md)
 
 
 |
 
-##### [fr.docjyJ.apiClientBuilder.connection.RequestTemplate](../fr.docjy-j.api-client-builder.connection/-request-template/index.md)
+##### [fr.docjyJ.apiClientBuilder.anotation.QueryParameter](../fr.docjy-j.api-client-builder.anotation/-query-parameter/index.md)
 
-Interface of the class builder to do a request.
+
+|
+
+##### [fr.docjyJ.apiClientBuilder.connection.RequestGetBuilder](../fr.docjy-j.api-client-builder.connection/-request-get-builder/index.md)
+
+Signals that an error was reached during the request to the server.
 
 
 |

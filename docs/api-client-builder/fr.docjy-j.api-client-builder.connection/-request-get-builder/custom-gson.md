@@ -2,7 +2,7 @@
 
 # customGson
 
-`abstract fun GsonBuilder.customGson(): GsonBuilder` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr.docjyJ.apiClientBuilder/connection/RequestGetBuilder.kt#L37)
+`abstract fun GsonBuilder.customGson(): GsonBuilder` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/connection/RequestGetBuilder.kt#L61)
 
 Edit the Gson object.
 

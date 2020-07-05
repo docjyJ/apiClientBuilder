@@ -2,7 +2,7 @@
 
 # ServerException
 
-`class ServerException : `[`Exception`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr.docjyJ.apiClientBuilder/exception/ServerException.kt#L17)
+`class ServerException : `[`Exception`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/exception/ServerException.kt#L17)
 
 Signals that an error was reached during the request to the server.
 

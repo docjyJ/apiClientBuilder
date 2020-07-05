@@ -2,7 +2,7 @@
 
 # url
 
-`val url: `[`URL`](https://docs.oracle.com/javase/6/docs/api/java/net/URL.html)`?` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr.docjyJ.apiClientBuilder/exception/ServerException.kt#L19)
+`val url: `[`URL`](https://docs.oracle.com/javase/6/docs/api/java/net/URL.html)`?` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/exception/ServerException.kt#L19)
 
 URL used for the request.
 

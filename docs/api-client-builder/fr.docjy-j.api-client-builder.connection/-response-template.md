@@ -2,7 +2,7 @@
 
 # ResponseTemplate
 
-`interface ResponseTemplate` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr.docjyJ.apiClientBuilder/connection/ResponseTemplate.kt#L6)
+`interface ResponseTemplate` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/connection/ResponseTemplate.kt#L6)
 
 The response class of a request.
 

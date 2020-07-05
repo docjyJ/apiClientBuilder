@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`RequestGetBuilder()`
+`RequestGetBuilder(responseClass: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<T>)`
 
 Signals that an error was reached during the request to the server.
 
