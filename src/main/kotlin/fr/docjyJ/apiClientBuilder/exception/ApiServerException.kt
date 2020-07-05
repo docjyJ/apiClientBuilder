@@ -14,7 +14,7 @@ import java.net.URL
  * @property responseCode code of the request.
  * @property responseMessage message of the request.
  */
-class ServerException internal constructor(connection: HttpURLConnection) : Exception(Error(connection).toJson())
+class ApiServerException internal constructor(connection: HttpURLConnection) : Exception(Error(connection).toJson())
 {
     val url: URL? = connection.url
 

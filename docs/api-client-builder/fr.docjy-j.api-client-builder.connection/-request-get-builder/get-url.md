@@ -8,7 +8,7 @@ Show the URL.
 
 ### Exceptions
 
-`ClientException` - When the library makes a mistake.
+`ApiClientException` - When the library makes a mistake.
 
 **Return**
 The URL of request in String object.

@@ -2,7 +2,7 @@
 
 # connectionApply
 
-`abstract fun `[`HttpURLConnection`](https://docs.oracle.com/javase/6/docs/api/java/net/HttpURLConnection.html)`.connectionApply(): `[`HttpURLConnection`](https://docs.oracle.com/javase/6/docs/api/java/net/HttpURLConnection.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/connection/RequestGetBuilder.kt#L56)
+`abstract fun `[`HttpURLConnection`](https://docs.oracle.com/javase/6/docs/api/java/net/HttpURLConnection.html)`.connectionApply(): `[`HttpURLConnection`](https://docs.oracle.com/javase/6/docs/api/java/net/HttpURLConnection.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/connection/RequestGetBuilder.kt#L116)
 
 Edit the HttpURLConnection object.
 

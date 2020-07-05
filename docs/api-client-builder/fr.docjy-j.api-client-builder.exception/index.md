@@ -8,5 +8,5 @@ Contains exception.
 
 | Name | Summary |
 |---|---|
-| [ClientException](-client-exception.md) | Indicates that an error was reached during a library action.`class ClientException : `[`Exception`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html) |
-| [ServerException](-server-exception/index.md) | Signals that an error was reached during the request to the server.`class ServerException : `[`Exception`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html) |
+| [ApiClientException](-api-client-exception.md) | Indicates that an error was reached during a library action.`class ApiClientException : `[`Exception`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html) |
+| [ApiServerException](-api-server-exception/index.md) | Signals that an error was reached during the request to the server.`class ApiServerException : `[`Exception`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html) |

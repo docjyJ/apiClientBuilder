@@ -2,7 +2,7 @@
 
 # RequestGetBuilder
 
-`abstract class RequestGetBuilder<T : `[`ResponseTemplate`](../-response-template.md)`>` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/connection/RequestGetBuilder.kt#L19)
+`abstract class RequestGetBuilder<T : `[`ResponseTemplate`](../-response-template.md)`>` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/connection/RequestGetBuilder.kt#L17)
 
 Signals that an error was reached during the request to the server.
 
@@ -10,7 +10,7 @@ Signals that an error was reached during the request to the server.
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | Signals that an error was reached during the request to the server.`RequestGetBuilder(responseClass: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<T>)` |
+| [&lt;init&gt;](-init-.md) | Signals that an error was reached during the request to the server.`RequestGetBuilder(endPointUrl: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, responseClass: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<T>)` |
 
 ### Functions
 

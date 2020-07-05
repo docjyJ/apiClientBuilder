@@ -6,5 +6,4 @@
 
 | Name | Summary |
 |---|---|
-| [EndpointURL](-endpoint-u-r-l/index.md) | `annotation class EndpointURL` |
 | [QueryParameter](-query-parameter/index.md) | `annotation class QueryParameter` |

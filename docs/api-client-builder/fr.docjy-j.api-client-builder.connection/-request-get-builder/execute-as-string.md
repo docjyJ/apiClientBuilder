@@ -8,9 +8,9 @@ Execute the request.
 
 ### Exceptions
 
-`ServerException` - When the server returns an error.
+`ApiServerException` - When the server returns an error.
 
-`ClientException` - When the library makes a mistake.
+`ApiClientException` - When the library makes a mistake.
 
 **Return**
 Response of request in String object.
