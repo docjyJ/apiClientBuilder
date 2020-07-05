@@ -41,7 +41,7 @@ abstract class RequestGetBuilder<T: ResponseTemplate>(
                             (if(parameters.toString()=="") "?" else "&") +
                             "$key=" +
                             URLEncoder.encode(
-                                value.parameterToString(),
+                                stringValue,
                                 StandardCharsets.UTF_8.toString()))
                 }
             }
@@ -124,10 +124,6 @@ abstract class RequestGetBuilder<T: ResponseTemplate>(
 
     var gsonTypeAdapter: List<JsonDeserializeRegisterTypeAdapter>? = null
     var queryTypeAdapter: List<QuerySerializeRegisterTypeAdapter>? = null
-    /**
-     * Build parametres with no String class.
-     */
-    abstract fun Any.parameterToString(): String
 
     /**
      * Execute the request.

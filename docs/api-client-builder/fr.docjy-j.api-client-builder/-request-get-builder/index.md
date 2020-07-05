@@ -27,4 +27,3 @@ Signals that an error was reached during the request to the server.
 | [execute](execute.md) | Execute the request.`open fun execute(): T` |
 | [executeAsString](execute-as-string.md) | Execute the request.`open fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [getUrl](get-url.md) | Show the URL.`open fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [parameterToString](parameter-to-string.md) | Build parametres with no String class.`abstract fun `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`.parameterToString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

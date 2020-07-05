@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`QuerySerializeRegisterTypeAdapter(type: `[`Type`](https://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html)`, querySerializer: `[`QuerySerializer`](../-query-serializer/index.md)`<`[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>)`
+`QuerySerializeRegisterTypeAdapter(type: `[`Type`](https://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html)`, querySerializer: `[`QuerySerializer`](../-query-serializer/index.md)`<*>)`

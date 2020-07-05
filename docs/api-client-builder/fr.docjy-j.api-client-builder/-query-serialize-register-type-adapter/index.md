@@ -8,11 +8,11 @@
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `QuerySerializeRegisterTypeAdapter(type: `[`Type`](https://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html)`, querySerializer: `[`QuerySerializer`](../-query-serializer/index.md)`<`[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>)` |
+| [&lt;init&gt;](-init-.md) | `QuerySerializeRegisterTypeAdapter(type: `[`Type`](https://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html)`, querySerializer: `[`QuerySerializer`](../-query-serializer/index.md)`<*>)` |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [querySerializer](query-serializer.md) | `val querySerializer: `[`QuerySerializer`](../-query-serializer/index.md)`<`[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`>` |
+| [querySerializer](query-serializer.md) | `val querySerializer: `[`QuerySerializer`](../-query-serializer/index.md)`<*>` |
 | [type](type.md) | `val type: `[`Type`](https://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html) |
