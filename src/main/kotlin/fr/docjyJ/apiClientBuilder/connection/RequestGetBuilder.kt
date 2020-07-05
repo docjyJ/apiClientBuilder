@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets
 /**
  * Signals that an error was reached during the request to the server.
  */
-abstract class RequestGetBuilder(private val responseClass: Class<ResponseTemplate>)  {
+abstract class RequestGetBuilder<T:ResponseTemplate>(private val responseClass: Class<T>)  {
 
 
     private fun runUrl(): String {
@@ -106,7 +106,7 @@ abstract class RequestGetBuilder(private val responseClass: Class<ResponseTempla
     }
 
     @Throws(ServerException::class, ClientException::class)
-    private fun run():ResponseTemplate {
+    private fun run():T {
         //Get the response
         val  obj = runAsString()
 
