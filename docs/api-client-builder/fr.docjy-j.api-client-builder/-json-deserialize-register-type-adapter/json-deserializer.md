@@ -2,4 +2,10 @@
 
 # jsonDeserializer
 
-`val jsonDeserializer: JsonDeserializer<*>` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/JsonDeserializeRegisterTypeAdapter.kt#L8)
+`val jsonDeserializer: JsonDeserializer<*>` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/JsonDeserializeRegisterTypeAdapter.kt#L14)
+
+Class TypeAdapter.
+
+### Property
+
+`jsonDeserializer` - Class TypeAdapter.

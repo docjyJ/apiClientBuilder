@@ -1,7 +1,7 @@
 package fr.docjyJ.apiClientBuilder
 
 import com.google.gson.GsonBuilder
-import fr.docjyJ.apiClientBuilder.anotation.QueryName
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.apiClientBuilder.exception.ApiClientException
 import fr.docjyJ.apiClientBuilder.exception.ApiServerException
 import java.io.BufferedReader
@@ -13,12 +13,24 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
 /**
- * Signals that an error was reached during the request to the server.
+ * The Request class for the method Get.
+ *
+ * @param T the Type of the response.
+ * @param endPointUrl The url of the request.
+ * @param responseClass the Type of the response.
+ * @property connectionApply Customize the object ABC that makes the request
+ * @property gsonTypeAdapter Add type adapter for Gson.
+ * @property queryTypeAdapter Add type adapter for Query.
  */
 abstract class RequestGetBuilder<T: ResponseTemplate>(
         private val endPointUrl: String,
         private val responseClass: Class<T>
 ) {
+    var connectionApply: HttpURLConnection.() -> Unit = { }
+    var gsonTypeAdapter: List<JsonDeserializeRegisterTypeAdapter>? = null
+    var queryTypeAdapter: List<QuerySerializeRegisterTypeAdapter>? = null
+
+
     @Throws(ApiClientException::class)
     private fun runUrl(): String {
         val parameters = StringBuilder()
@@ -27,9 +39,9 @@ abstract class RequestGetBuilder<T: ResponseTemplate>(
             try {
                 field.isAccessible = true
                 val value = field.get(obj) ?: null
-                var key = field.name
-                field.annotations.forEach { if(it is QueryName) key = it.name }
                 if(value != null) {
+                    var key = field.name
+                    field.annotations.forEach { if(it is QueryName) key = it.name }
                     val type: Type = field.type
                     var stringValue = value.toString()
                     queryTypeAdapter?.forEach {
@@ -115,15 +127,6 @@ abstract class RequestGetBuilder<T: ResponseTemplate>(
         }
 
     }
-
-
-    /**
-     * Edit the HttpURLConnection object.
-     */
-    open fun HttpURLConnection.connectionApply() = this
-
-    var gsonTypeAdapter: List<JsonDeserializeRegisterTypeAdapter>? = null
-    var queryTypeAdapter: List<QuerySerializeRegisterTypeAdapter>? = null
 
     /**
      * Execute the request.

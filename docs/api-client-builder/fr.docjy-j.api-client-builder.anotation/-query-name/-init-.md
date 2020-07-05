@@ -1,4 +1,4 @@
-[apiClientBuilder](../../index.md) / [fr.docjyJ.apiClientBuilder.anotation](../index.md) / [QueryName](index.md) / [&lt;init&gt;](./-init-.md)
+[apiClientBuilder](../../index.md) / [fr.docjyJ.apiClientBuilder.annotation](../index.md) / [QueryName](index.md) / [&lt;init&gt;](./-init-.md)
 
 # &lt;init&gt;
 

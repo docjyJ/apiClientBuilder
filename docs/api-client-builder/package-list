@@ -2,5 +2,5 @@ $dokka.format:gfm
 $dokka.linkExtension:md
 
 fr.docjyJ.apiClientBuilder
-fr.docjyJ.apiClientBuilder.anotation
+fr.docjyJ.apiClientBuilder.annotation
 fr.docjyJ.apiClientBuilder.exception

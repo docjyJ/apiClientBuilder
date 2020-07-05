@@ -2,4 +2,10 @@
 
 # querySerializer
 
-`val querySerializer: `[`QuerySerializer`](../-query-serializer/index.md)`<*>` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/QuerySerializeRegisterTypeAdapter.kt#L7)
+`val querySerializer: `[`QuerySerializer`](../-query-serializer/index.md)`<*>` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/QuerySerializeRegisterTypeAdapter.kt#L13)
+
+Class TypeAdapter.
+
+### Property
+
+`querySerializer` - Class TypeAdapter.

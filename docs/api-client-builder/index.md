@@ -6,8 +6,8 @@ This is the apiClientBuilder documentation.
 
 | Name | Summary |
 |---|---|
-| [fr.docjyJ.apiClientBuilder](fr.docjy-j.api-client-builder/index.md) |  |
-| [fr.docjyJ.apiClientBuilder.anotation](fr.docjy-j.api-client-builder.anotation/index.md) |  |
+| [fr.docjyJ.apiClientBuilder](fr.docjy-j.api-client-builder/index.md) | Contains class to creat request/response. |
+| [fr.docjyJ.apiClientBuilder.annotation](fr.docjy-j.api-client-builder.annotation/index.md) | Contains exception.annotation |
 | [fr.docjyJ.apiClientBuilder.exception](fr.docjy-j.api-client-builder.exception/index.md) | Contains exception. |
 
 ### Index

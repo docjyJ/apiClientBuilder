@@ -3,3 +3,6 @@
 # &lt;init&gt;
 
 `JsonDeserializeRegisterTypeAdapter(type: `[`Type`](https://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html)`, jsonDeserializer: JsonDeserializer<*>)`
+
+The class to register a type adapter for Gson.
+

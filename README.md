@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'fr.docjyJ.apiClientBuilder:apiClientBuilder:1.0'
+    implementation 'fr.docjyJ.apiClientBuilder:apiClientBuilder:2.0'
 }
 ````
 
@@ -16,3 +16,6 @@ dependencies {
 
 ## Documentation
 See the Library documentation [here](docs/api-client-builder/index.md)
+
+## Show Client api using this project
+[TisseoLib](https://github.com/docjyJ/TisseoLib) 

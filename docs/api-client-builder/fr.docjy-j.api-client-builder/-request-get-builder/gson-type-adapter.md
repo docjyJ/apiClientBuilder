@@ -2,4 +2,10 @@
 
 # gsonTypeAdapter
 
-`var gsonTypeAdapter: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`JsonDeserializeRegisterTypeAdapter`](../-json-deserialize-register-type-adapter/index.md)`>?` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/RequestGetBuilder.kt#L125)
+`var gsonTypeAdapter: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`JsonDeserializeRegisterTypeAdapter`](../-json-deserialize-register-type-adapter/index.md)`>?` [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/RequestGetBuilder.kt#L30)
+
+Add type adapter for Gson.
+
+### Property
+
+`gsonTypeAdapter` - Add type adapter for Gson.

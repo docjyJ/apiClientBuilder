@@ -4,5 +4,12 @@
 
 `RequestGetBuilder(endPointUrl: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, responseClass: `[`Class`](https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html)`<T>)`
 
-Signals that an error was reached during the request to the server.
+The Request class for the method Get.
 
+### Parameters
+
+`T` - the Type of the response.
+
+`endPointUrl` - The url of the request.
+
+`responseClass` - the Type of the response.

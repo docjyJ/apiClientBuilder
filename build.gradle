@@ -38,7 +38,7 @@ def ARTIFACT_ID= 'apiClientBuilder'
 def MAVEN_REPOSITORY= 'maven'
 def USER= 'docjyj'
 
-def VERSION_NAME='2.0-PRE7'
+def VERSION_NAME='2.0'
 
 def VERSION_DESC = 'Update of library '+ARTIFACT_ID+' at the vertion '+VERSION_NAME
 def DESC = 'packages.md'

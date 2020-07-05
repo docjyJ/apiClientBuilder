@@ -1,4 +1,4 @@
-[apiClientBuilder](../../index.md) / [fr.docjyJ.apiClientBuilder.anotation](../index.md) / [QueryParameter](./index.md)
+[apiClientBuilder](../../index.md) / [fr.docjyJ.apiClientBuilder.annotation](../index.md) / [QueryParameter](./index.md)
 
 # QueryParameter
 

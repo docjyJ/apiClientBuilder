@@ -1,6 +1,6 @@
-[apiClientBuilder](../index.md) / [fr.docjyJ.apiClientBuilder.anotation](./index.md)
+[apiClientBuilder](../index.md) / [fr.docjyJ.apiClientBuilder.annotation](./index.md)
 
-## Package fr.docjyJ.apiClientBuilder.anotation
+## Package fr.docjyJ.apiClientBuilder.annotation
 
 ### Annotations
 

@@ -2,4 +2,10 @@
 
 # type
 
-`val type: `[`Type`](https://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/QuerySerializeRegisterTypeAdapter.kt#L6)
+`val type: `[`Type`](https://docs.oracle.com/javase/6/docs/api/java/lang/reflect/Type.html) [(source)](https://github.com/docjyj/apiClientBuilder/tree/master/src/main/kotlin/fr/docjyJ/apiClientBuilder/QuerySerializeRegisterTypeAdapter.kt#L12)
+
+Type of object to adapt.
+
+### Property
+
+`type` - Type of object to adapt.
